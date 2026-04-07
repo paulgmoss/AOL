@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dean's Memorandum — AoL Hub | College of Business and Law</title>
+<style>/* Adelaide University Palette */
+:root {
+  --dark-blue: #140F50;
+  --purple: #836BFF;
+  --bright-blue: #1448FF;
+  --limestone: #F8EFE0;
+  --white: #FFFFFF;
+  --purple-light: #EEE9FF;
+  --blue-light: #E8EDFF;
+  --text: #1a1033;
+  --text-mid: #3d3560;
+  --text-light: #7a6fa8;
+  --border: #d8d0f0;
+  --limestone-dark: #ede4ce;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--limestone);
+  min-height: 100vh;
+}
+
+/* NAV */
+.site-nav {
+  background: var(--dark-blue);
+  border-bottom: 3px solid var(--purple);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--purple); }
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); background: rgba(131,107,255,0.25); }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--dark-blue);
+  padding: 60px 40px 50px;
+  border-bottom: 4px solid var(--purple);
+}
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+.page-hero .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero .lead {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* CONTENT WRAPPER */
+.content-wrap { max-width: 860px; margin: 0 auto; padding: 50px 40px 80px; }
+
+/* PROSE */
+.prose p { line-height: 1.8; margin-bottom: 18px; color: var(--text); text-align: justify; }
+.prose p:last-child { margin-bottom: 0; }
+.prose h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--dark-blue);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--purple);
+}
+.prose h3 { font-size: 17px; font-weight: 600; color: var(--dark-blue); margin: 28px 0 10px; }
+.prose ul { margin: 10px 0 18px 22px; }
+.prose ul li { margin-bottom: 8px; line-height: 1.7; }
+.prose strong { color: var(--dark-blue); }
+
+/* CALLOUT BOXES */
+.callout {
+  display: flex;
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.callout-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+}
+.callout-body { padding: 16px 20px; flex: 1; font-size: 15px; line-height: 1.75; }
+.callout.tip .callout-label { background: var(--purple); color: var(--white); }
+.callout.tip .callout-body { background: var(--purple-light); color: var(--text); font-style: italic; }
+.callout.note .callout-label { background: var(--bright-blue); color: var(--white); }
+.callout.note .callout-body { background: var(--blue-light); color: var(--dark-blue); }
+.callout.key .callout-label { background: var(--dark-blue); color: var(--purple); }
+.callout.key .callout-body { background: var(--limestone); color: var(--text); border-left: 3px solid var(--dark-blue); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark-blue);
+  border-top: 3px solid var(--purple);
+  padding: 28px 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.site-footer a { color: var(--purple); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html">AoL Hub &nbsp;<span>|</span>&nbsp; College of Business and Law</a>
+  <ul class="nav-links"><li><a href="index.html" class="">Home</a></li>
+<li><a href="rationale.html" class="">Why AoL</a></li>
+<li><a href="memo.html" class="active">Dean's Memo</a></li>
+<li><a href="data.html" class="">Data & Reporting</a></li>
+<li><a href="guide.html" class="">Canvas Guide</a></li></ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Dean's Memorandum</div>
+    <h1>Assurance of Learning — 2026 Approach and Implementation</h1>
+    <p class="lead">An official communication from Peter Burdon, Dean Academic, College of Business and Law, outlining the scope, rationale, and implementation plan for AoL in 2026.</p>
+  </div>
+</div>
+<div class="content-wrap prose">
+
+<style>
+.memo-header {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--dark-blue);
+  border-radius: 0 6px 6px 0;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+.memo-header table { border-collapse: collapse; width: 100%; }
+.memo-header td { padding: 5px 0; vertical-align: top; }
+.memo-header td:first-child { font-weight: 600; color: var(--dark-blue); width: 80px; }
+.memo-header .memo-re { font-weight: 600; color: var(--dark-blue); margin-top: 4px; }
+.memo-divider { border: none; border-top: 2px solid var(--border); margin: 32px 0; }
+</style>
+
+<div class="memo-header">
+  <table>
+    <tr><td>TO:</td><td>College Executive</td></tr>
+    <tr><td>FROM:</td><td>Peter Burdon, Dean Academic, College of Business and Law</td></tr>
+    <tr><td>DATE:</td><td>March 2026</td></tr>
+    <tr><td>RE:</td><td class="memo-re">Assurance of Learning — 2026 Approach and Implementation</td></tr>
+  </table>
+</div>
+
+<h2>1. Introduction and Context</h2>
+<p>This memorandum provides College Executive with an update on the College of Business and Law's approach to Assurance of Learning (AoL) for 2026. AoL is first and foremost a best practice approach to ensuring the quality of our courses and programs. It provides an embedded continuous improvement mechanism, enabled by our new curriculum architecture, through which we can systematically evaluate whether students are developing the skills and competencies our programs are designed to deliver. It is, in short, how we hold ourselves accountable to our students.</p>
+<p>The Adelaide Business School — comprising the Schools of Management, Economics, Marketing, and Accounting and Finance — is also subject to AACSB accreditation, and the approach described here satisfies those requirements. Critically, AACSB requires that we demonstrate the closing of the loop — that is, showing how curriculum has been improved as a result of the AoL process — before our site visit, which makes it essential that we begin collecting data now. Over time, the intention is that this approach will be adopted across all schools in the College.</p>
+<p>AACSB's own guidance is explicit that AoL should not be approached as a compliance exercise: peer review teams are asked to assess whether schools have a culture of evidence-based continuous improvement. The approach outlined in this memorandum has been endorsed by the PVC and is designed with exactly that quality focus in mind.</p>
+
+<h2>2. Curriculum Mapping, Rubric Alignment, and the Purpose of AoL</h2>
+<p>At its core, AoL exists to explicitly demonstrate that students are developing the skills and competencies that our programs are designed to instil. It connects the objectives that underpin our teaching to the assignments through which students demonstrate their learning. When done well, AoL provides a clear, evidence-based picture of whether what we say we are teaching is actually being taught, assessed, and achieved. This is an expected feature of mature curriculum architecture, not an optional add-on.</p>
+<p>Our expectation is that every course has robust, traceable mapping from assignment tasks through to Course Learning Outcomes (CLOs), Program Learning Outcomes (PLOs), and ultimately Graduate Qualities (GQs). This alignment was intended to be embedded in course design from the outset, such that AoL data collection would be a natural byproduct of ordinary marking and grading activity.</p>
+<p>After reviewing the curriculum in preparation for reporting on AoL, we have found significant variation in the quality of this mapping across the College. While most courses have mapped assignments to CLOs, there is a notable drop-off in the number of courses that have then mapped CLOs to PLOs, and a further drop-off to Graduate Qualities. More significantly, there are many instances where CLOs have not been incorporated into the rubrics that accompany assignment tasks. This is more than a procedural gap — where CLOs are absent from rubrics, there is a legitimate question about whether assignments are genuinely aligned with the learning objectives and desired outcomes of the course. It also means that we have not yet systematised the approach in the way our curriculum architecture was designed to support.</p>
+<p>Addressing this gap is a priority for Semester 1. The underlying mapping work has, in many cases, already been done in program and course documentation — it simply needs to be properly reflected in Canvas rubrics. This is not a large task once a course coordinator has appropriate support, and we have a plan to deliver that support (see Section 4 below).</p>
+
+<h2>3. Scope: A Whole-of-College Approach</h2>
+<p>Our approach to AoL is grounded in a commitment to quality and continuous improvement across all programs — not in accreditation compliance alone. Rather than selecting courses on an ad hoc or inconsistent basis, we have decided to apply the AoL framework across all programs and courses in the Adelaide Business School. This decision reflects the view that the value of AoL lies precisely in its universality: it should be the mechanism through which every program in the College demonstrates the quality of its outcomes to students, staff, and the broader community.</p>
+<p>This whole-of-College approach has several important advantages:</p>
+<ul>
+  <li>It supports genuine quality assurance across the College rather than creating a two-tiered system where some programs are monitored and others are not.</li>
+  <li>It ensures that AoL is experienced as a shared professional responsibility rather than a targeted review of particular staff or programs. No individual will feel singled out, because the expectation applies uniformly.</li>
+  <li>It builds the data infrastructure needed for long-term continuous improvement — the richer the dataset, the more meaningful our analysis and the more actionable our insights.</li>
+  <li>It is consistent with what AACSB expects and provides strong evidence of a systematic, school-wide process.</li>
+</ul>
+<p>For AACSB reporting purposes, two programs per school have been designated as the primary reporting programs — one undergraduate and one postgraduate. Data will be collected across all programs, with formal reporting focused on these designated programs. This ensures our accreditation obligations are met while building a broader evidence base for the College.</p>
+<p>Looking ahead, from 2027 the expectation is that AoL is embedded as a continuous improvement process across all courses as they are reviewed and updated each year. This year's work lays the foundation for that.</p>
+
+<h2>4. Implementation: What We Are Doing and When</h2>
+<h3>Semester 1 2026 — Final Assignment Focus</h3>
+<p>Given that Semester 1 is already underway and a number of assignment tasks are being submitted imminently, the focus for Semester 1 will be on the final piece of assignment in each course. To be clear, we are not asking course coordinators to change their assignments — the substance and design of assignments remain as they are. Rather, we will work with each lecturer to identify which CLOs are being assessed in the final assignment task and to confirm which rubric line items are capturing those CLOs. In many cases this will require only a minor clarification or adjustment to the rubric as it stands. In most courses, the final assignment is a substantial task that covers most or all CLOs, making it the most valuable single data point available to us this semester.</p>
+<h3>Semester 2 2026 — Extended Coverage</h3>
+<p>From Semester 2, we will move to collecting AoL data from two major assignment tasks per course. This will give us richer and more reliable data on how CLOs are being achieved across a program of study, while remaining manageable for course coordinators. Our focus will be on substantive, summative tasks that give a meaningful picture of student learning outcomes.</p>
+<h3>Data Collection Method</h3>
+<p>AoL data will be collected using a 3-point rubric scale: Does Not Meet / Meets / Exceeds. This scale is consistent with AACSB reporting conventions and is the standard supported by the Accredinator platform we have adopted for AoL data management. Importantly, this scale can be derived directly from existing rubrics without any additional marking — it is a way of reading and recording what is already there, not a new layer of assignment work. The scale has been confirmed as sufficient for AACSB purposes and is less administratively burdensome than a 5-point system.</p>
+
+<h2>5. Staff Support</h2>
+<p>Most course coordinators will already have rubrics that can, with little or no modification, support AoL data collection. For those whose rubrics need some adjustment, the process is straightforward, and targeted support will be available. The following mechanisms are being put in place:</p>
+
+<div class="callout tip">
+  <div class="callout-label">Support</div>
+  <div class="callout-body"><strong>At-elbow rubric support from TLI.</strong> A member of the TLI team will work directly with course coordinators — one-on-one — to review the final assignment rubric, confirm which CLOs it captures, and make any minor adjustments needed. For courses where rubrics already reflect CLOs well, this check-in may take no more than a few minutes. Where some adjustment is needed, the task is estimated at around 15 minutes per course.</div>
+</div>
+
+<div class="callout tip">
+  <div class="callout-label">Support</div>
+  <div class="callout-body"><strong>Information sessions on AoL for each school.</strong> A series of information sessions will begin next week, with the first session directed at Academic Leads. These sessions will explain what AoL is, why it matters, and what will be required of course coordinators.</div>
+</div>
+
+<div class="callout tip">
+  <div class="callout-label">Support</div>
+  <div class="callout-body"><strong>Additional College staff capacity for data entry support.</strong> For courses with paper-based exams, the data entry process involves an additional step beyond what Canvas automates. College professional staff will be available to assist with this work, including through the Curriculum Development Coordinators whose contracts have recently been extended. The intention is to minimise the burden on individual academic staff, especially in this first cycle.</div>
+</div>
+
+<p>We are keen to hear from Heads of School about what other support can be put in place to help colleagues with this task.</p>
+
+</div>
+<footer class="site-footer">
+  Adelaide University &nbsp;|&nbsp; College of Business and Law &nbsp;|&nbsp; Assurance of Learning Staff Hub &nbsp;|&nbsp; Teaching and Learning Innovation
+</footer>
+</body>
+</html>

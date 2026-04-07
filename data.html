@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data and Reporting | AoL Hub | College of Business and Law</title>
+<style>/* Adelaide University Palette */
+:root {
+  --dark-blue: #140F50;
+  --purple: #836BFF;
+  --bright-blue: #1448FF;
+  --limestone: #F8EFE0;
+  --white: #FFFFFF;
+  --purple-light: #EEE9FF;
+  --blue-light: #E8EDFF;
+  --text: #1a1033;
+  --text-mid: #3d3560;
+  --text-light: #7a6fa8;
+  --border: #d8d0f0;
+  --limestone-dark: #ede4ce;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--limestone);
+  min-height: 100vh;
+}
+
+/* NAV */
+.site-nav {
+  background: var(--dark-blue);
+  border-bottom: 3px solid var(--purple);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--purple); }
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); background: rgba(131,107,255,0.25); }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--dark-blue);
+  padding: 60px 40px 50px;
+  border-bottom: 4px solid var(--purple);
+}
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+.page-hero .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero .lead {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* CONTENT WRAPPER */
+.content-wrap { max-width: 860px; margin: 0 auto; padding: 50px 40px 80px; }
+
+/* PROSE */
+.prose p { line-height: 1.8; margin-bottom: 18px; color: var(--text); text-align: justify; }
+.prose p:last-child { margin-bottom: 0; }
+.prose h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--dark-blue);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--purple);
+}
+.prose h3 { font-size: 17px; font-weight: 600; color: var(--dark-blue); margin: 28px 0 10px; }
+.prose ul { margin: 10px 0 18px 22px; }
+.prose ul li { margin-bottom: 8px; line-height: 1.7; }
+.prose strong { color: var(--dark-blue); }
+
+/* CALLOUT BOXES */
+.callout {
+  display: flex;
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.callout-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+}
+.callout-body { padding: 16px 20px; flex: 1; font-size: 15px; line-height: 1.75; }
+.callout.tip .callout-label { background: var(--purple); color: var(--white); }
+.callout.tip .callout-body { background: var(--purple-light); color: var(--text); font-style: italic; }
+.callout.note .callout-label { background: var(--bright-blue); color: var(--white); }
+.callout.note .callout-body { background: var(--blue-light); color: var(--dark-blue); }
+.callout.key .callout-label { background: var(--dark-blue); color: var(--purple); }
+.callout.key .callout-body { background: var(--limestone); color: var(--text); border-left: 3px solid var(--dark-blue); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark-blue);
+  border-top: 3px solid var(--purple);
+  padding: 28px 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.site-footer a { color: var(--purple); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html">AoL Hub <span>|</span> College of Business and Law</a>
+  <ul class="nav-links"><li><a href="index.html" class="">Home</a></li>
+<li><a href="rationale.html" class="">Why AoL</a></li>
+<li><a href="memo.html" class="">Dean's Memo</a></li>
+<li><a href="data.html" class="active">Data and Reporting</a></li>
+<li><a href="plan.html" class="">College Plan</a></li>
+<li><a href="guide.html" class="">Canvas Guide</a></li>
+<li><a href="exemplars.html" class="">Exemplars</a></li></ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Data and Reporting</div>
+    <h1>From Rubric to Report: How AoL Data Is Used</h1>
+    <p class="lead">How the data you generate through careful rubric design and Canvas setup travels through the system to inform programme-level reporting and AACSB accreditation evidence.</p>
+  </div>
+</div>
+<div class="content-wrap prose">
+
+<style>
+.flow-steps { display: flex; flex-direction: column; gap: 0; margin: 32px 0 40px; }
+.flow-step { display: flex; gap: 20px; align-items: flex-start; }
+.flow-step-line { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.flow-step-dot {
+  width: 36px; height: 36px; min-width: 36px; border-radius: 50%;
+  background: var(--dark-blue); border: 3px solid var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-weight: 700; font-size: 14px; position: relative; z-index: 2;
+}
+.flow-step-connector { width: 2px; flex: 1; background: var(--border); min-height: 24px; }
+.flow-step-body { padding: 4px 0 32px; }
+.flow-step-body h3 { font-size: 16px; font-weight: 600; color: var(--dark-blue); margin-bottom: 6px; }
+.flow-step-body p { font-size: 15px; line-height: 1.7; color: var(--text-mid); margin: 0 0 8px; }
+.flow-step-body p:last-child { margin-bottom: 0; }
+.guide-link { font-size: 14px; font-weight: 600; color: var(--purple); text-decoration: none; }
+.guide-link:hover { color: var(--dark-blue); }
+.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0; }
+.results-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 20px 22px; }
+.results-card h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); margin-bottom: 12px; }
+.results-card .stat { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--dark-blue); line-height: 1; }
+.results-card .stat.good { color: #1a7a3c; }
+.results-card .stat.poor { color: #b01c1c; }
+.results-card .stat-label { font-size: 13px; color: var(--text-mid); margin-top: 4px; }
+.live-panel {
+  background: var(--dark-blue); border-radius: 10px;
+  padding: 32px 36px; margin: 48px 0 32px; border-top: 4px solid var(--purple);
+}
+.live-panel-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.live-dot { width: 10px; height: 10px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.live-panel h2 { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); border: none; padding: 0; margin: 0; }
+.live-panel .cycle-label { font-size: 13px; color: var(--purple); font-weight: 600; margin-bottom: 28px; letter-spacing: 0.04em; }
+.progress-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 28px; }
+.progress-stat { text-align: center; }
+.progress-stat .big-num { font-family: 'DM Serif Display', serif; font-size: 38px; color: var(--white); line-height: 1; }
+.progress-stat .stat-desc { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 6px; line-height: 1.4; }
+.progress-bar-wrap { margin-bottom: 10px; }
+.progress-bar-label { display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+.progress-bar-track { background: rgba(255,255,255,0.12); border-radius: 4px; height: 8px; overflow: hidden; }
+.progress-bar-fill { height: 100%; border-radius: 4px; background: var(--purple); }
+.progress-bar-fill.bright { background: var(--bright-blue); }
+.progress-bar-fill.green { background: #4ade80; }
+.live-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 24px 0; }
+.comms-section h3 { font-size: 16px; font-weight: 600; color: var(--purple); margin-bottom: 12px; }
+.comms-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+.comms-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--purple); margin-top: 7px; }
+.comms-item p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0; }
+.comms-item strong { color: var(--white); }
+.live-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 20px; font-style: italic; }
+</style>
+
+<p>Understanding how your rubric marking contributes to programme-level reporting, and ultimately to AACSB accreditation, helps make the AoL process feel purposeful rather than procedural. This page traces that journey from the moment you apply a rubric criterion to a student submission, through to the College's annual reporting cycle. It also includes a live view of where the College currently sits in the reporting cycle, so staff can see the process in action.</p>
+
+<h2>How Data Flows Through the System</h2>
+<div class="flow-steps">
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">1</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>Rubric marking: a straightforward judgement call</h3>
+      <p>When marking a student submission, the marker makes a judgement about how each rubric criterion has been met. Where criteria are mapped to CLOs, this marking process also captures outcome attainment. It is not automated: the marker determines how the criterion score, or the aggregated score across multiple criteria mapped to the same CLO, translates to an Exceeds, Meets, or Does Not Meet outcome level. In practice this is a quick and intuitive call once the rubric is set up correctly.</p>
+      <p><a class="guide-link" href="guide.html">Part B of the Canvas How-To Guide covers the marking process in detail, across all three rubric configurations.</a></p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">2</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>CLO attainment recorded and aggregated in Canvas</h3>
+      <p>Once the marker has made their outcome-level judgement, Canvas records the CLO attainment for that student. Where a CLO is assessed across multiple assignments, Canvas aggregates the results using the calculation method configured for that outcome (weighted average by default). The Learning Mastery Pathway view shows each student their attainment level for every CLO, and shows the course coordinator the same data at cohort level in real time.</p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">3</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>CLO data mapped to PLOs</h3>
+      <p>Each CLO has already been mapped to one or more Programme Learning Outcomes as part of the curriculum architecture. CLO attainment data flows upward through this mapping to produce a PLO attainment profile for each program, with later-year CLOs carrying greater weight to reflect their stronger correlation with graduate-level capability.</p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">4</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>Programme team formalises the data</h3>
+      <p>At the end of each teaching period, the program team compiles and reviews the PLO attainment data across all participating courses. This is not about generating new mappings; those are already in place. It is about bringing the data together, reviewing what it shows, and preparing it for committee consideration. Two programs per school are designated as primary AACSB reporting programs, one undergraduate and one postgraduate, with data collected across all programs.</p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">5</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>University-wide quality processes</h3>
+      <p>The Curriculum Quality Assurance Procedure requires Course Coordinators to monitor learning analytics, student performance data, and alignment with program learning outcomes every time a course is delivered. That course-level monitoring feeds into Annual Program Monitoring which in turn informs University Program Reviews. Courses participating in AoL generate exactly this evidence as a natural part of their marking practice, rather than needing to produce it through a separate process later.</p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-step-line"><div class="flow-step-dot">6</div><div class="flow-step-connector"></div></div>
+    <div class="flow-step-body">
+      <h3>Closing the loop</h3>
+      <p>Where PLO attainment falls below expectation, the AoL Committee traces the result back through the CLO data to identify which courses and outcomes are contributing to the gap. Targeted interventions are designed and implemented, and their impact is measured in the following data collection cycle. This closing-the-loop evidence is what AACSB peer review teams look for: not perfect results, but a demonstrable culture of using evidence to improve.</p>
+    </div>
+  </div>
+
+</div>
+
+<h2>What the Data Looks Like in Practice</h2>
+<p>The power of outcome-level data becomes clearest when you see the difference it makes compared to grade-based reporting alone. The following illustrates what a closing-the-loop cycle looks like at programme level, based on the kind of data the system generates.</p>
+<div class="results-grid">
+  <div class="results-card">
+    <h4>Baseline year PLO 1 attainment</h4>
+    <div class="stat poor">21.7%</div>
+    <div class="stat-label">Exceeds expectations</div>
+    <div class="stat" style="font-size:22px;margin-top:10px;">41.7%</div>
+    <div class="stat-label">Meets expectations</div>
+    <div class="stat poor" style="font-size:22px;margin-top:10px;">26.5%</div>
+    <div class="stat-label">Does not meet expectations</div>
+  </div>
+  <div class="results-card">
+    <h4>Following intervention PLO 1 attainment</h4>
+    <div class="stat good">85.1%</div>
+    <div class="stat-label">Exceeds expectations</div>
+    <div class="stat" style="font-size:22px;margin-top:10px;">7.8%</div>
+    <div class="stat-label">Meets expectations</div>
+    <div class="stat good" style="font-size:22px;margin-top:10px;">7.2%</div>
+    <div class="stat-label">Does not meet expectations</div>
+  </div>
+</div>
+<p>These results came from a real AoL cycle in which CLO-level analysis revealed that poor attainment on PLO 1 was concentrated in specific courses and specific outcomes, not distributed evenly across the programme. Interventions included restructuring assignment timing so formative tasks preceded summative ones for underperforming CLOs, redesigning rubric criteria to better capture the intended outcomes, and in one case a full course redesign. The improvement across a single cycle demonstrates that outcome-level precision, rather than grade-based monitoring, is what makes targeted intervention possible.</p>
+
+<div class="live-panel">
+  <div class="live-panel-header">
+    <div class="live-dot"></div>
+    <h2>Current Reporting Cycle</h2>
+  </div>
+  <div class="cycle-label">Semester 1, 2026 Final Assignment Focus</div>
+  <div class="progress-grid">
+    <div class="progress-stat">
+      <div><span class="big-num">—</span></div>
+      <div class="stat-desc">Courses with Canvas outcomes configured</div>
+    </div>
+    <div class="progress-stat">
+      <div><span class="big-num">—</span></div>
+      <div class="stat-desc">Courses with marking complete</div>
+    </div>
+    <div class="progress-stat">
+      <div><span class="big-num">—</span></div>
+      <div class="stat-desc">Programs with data ready for committee review</div>
+    </div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-label"><span>Overall College setup progress</span><span>To be updated</span></div>
+    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%"></div></div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-label"><span>Marking completed</span><span>To be updated</span></div>
+    <div class="progress-bar-track"><div class="progress-bar-fill bright" style="width:0%"></div></div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-label"><span>PLO data ready for committee review</span><span>To be updated</span></div>
+    <div class="progress-bar-track"><div class="progress-bar-fill green" style="width:0%"></div></div>
+  </div>
+  <div class="live-divider"></div>
+  <div class="comms-section">
+    <h3>What happens with the data and when you will hear back</h3>
+    <div class="comms-item">
+      <div class="comms-dot"></div>
+      <p><strong>End of Semester 1 marking period:</strong> The program team compiles and formalises PLO attainment data across all participating courses, drawing on the CLO-to-PLO mappings already in place. This data is prepared for AoL Committee review.</p>
+    </div>
+    <div class="comms-item">
+      <div class="comms-dot"></div>
+      <p><strong>AoL Committee review:</strong> The committee meets to review PLO attainment results, identify any patterns of concern, and propose targeted interventions where needed.</p>
+    </div>
+    <div class="comms-item">
+      <div class="comms-dot"></div>
+      <p><strong>Results communicated back to course coordinators:</strong> Each course coordinator whose data has been included in the cycle will receive a summary of findings relevant to their course, including where CLO attainment was strong, where gaps were identified, and any recommended actions. This is a commitment, not an aspiration. The data belongs to the teaching team and will be shared with them.</p>
+    </div>
+    <div class="comms-item">
+      <div class="comms-dot"></div>
+      <p><strong>Semester 2 planning:</strong> Findings from Semester 1 inform the design of the Semester 2 data collection cycle, which extends to two major assignments per course.</p>
+    </div>
+  </div>
+  <div class="live-note">This panel is updated by the School as the cycle progresses. Figures will be populated once setup and marking data becomes available.</div>
+</div>
+
+<div class="callout key">
+  <div class="callout-label">Key</div>
+  <div class="callout-body">One of the lessons from previous AoL processes is that data collected but never communicated back to Teaching Academics serves no one. The College is committed to closing that loop at the course level, not just the programme level. If you participate in AoL data collection in 2026, you will receive findings relevant to your course.</div>
+</div>
+
+<h2>A Note on the Transition Period</h2>
+<p>Adelaide University brings together the curriculum architectures of the University of Adelaide and the University of South Australia. During 2026, the AoL reporting framework is being designed to draw on the best of both approaches while building toward a unified system. This means some processes and reporting formats will evolve across the year. The School will communicate any changes clearly as they arise. The core requirement, that CLOs are mapped to rubric criteria in Canvas, that attainment data is captured at outcome level, and that this data informs programme-level review, remains consistent throughout.</p>
+
+</div>
+<footer class="site-footer">
+  Adelaide University | College of Business and Law | Assurance of Learning Staff Hub | Teaching and Learning Innovation
+</footer>
+</body>
+</html>

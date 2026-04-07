@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Plan 2026 | AoL Hub | College of Business and Law</title>
+<style>/* Adelaide University Palette */
+:root {
+  --dark-blue: #140F50;
+  --purple: #836BFF;
+  --bright-blue: #1448FF;
+  --limestone: #F8EFE0;
+  --white: #FFFFFF;
+  --purple-light: #EEE9FF;
+  --blue-light: #E8EDFF;
+  --text: #1a1033;
+  --text-mid: #3d3560;
+  --text-light: #7a6fa8;
+  --border: #d8d0f0;
+  --limestone-dark: #ede4ce;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--limestone);
+  min-height: 100vh;
+}
+
+/* NAV */
+.site-nav {
+  background: var(--dark-blue);
+  border-bottom: 3px solid var(--purple);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--purple); }
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); background: rgba(131,107,255,0.25); }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--dark-blue);
+  padding: 60px 40px 50px;
+  border-bottom: 4px solid var(--purple);
+}
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+.page-hero .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero .lead {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* CONTENT WRAPPER */
+.content-wrap { max-width: 860px; margin: 0 auto; padding: 50px 40px 80px; }
+
+/* PROSE */
+.prose p { line-height: 1.8; margin-bottom: 18px; color: var(--text); text-align: justify; }
+.prose p:last-child { margin-bottom: 0; }
+.prose h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--dark-blue);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--purple);
+}
+.prose h3 { font-size: 17px; font-weight: 600; color: var(--dark-blue); margin: 28px 0 10px; }
+.prose ul { margin: 10px 0 18px 22px; }
+.prose ul li { margin-bottom: 8px; line-height: 1.7; }
+.prose strong { color: var(--dark-blue); }
+
+/* CALLOUT BOXES */
+.callout {
+  display: flex;
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.callout-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+}
+.callout-body { padding: 16px 20px; flex: 1; font-size: 15px; line-height: 1.75; }
+.callout.tip .callout-label { background: var(--purple); color: var(--white); }
+.callout.tip .callout-body { background: var(--purple-light); color: var(--text); font-style: italic; }
+.callout.note .callout-label { background: var(--bright-blue); color: var(--white); }
+.callout.note .callout-body { background: var(--blue-light); color: var(--dark-blue); }
+.callout.key .callout-label { background: var(--dark-blue); color: var(--purple); }
+.callout.key .callout-body { background: var(--limestone); color: var(--text); border-left: 3px solid var(--dark-blue); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark-blue);
+  border-top: 3px solid var(--purple);
+  padding: 28px 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.site-footer a { color: var(--purple); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html">AoL Hub <span>|</span> College of Business and Law</a>
+  <ul class="nav-links"><li><a href="index.html" class="">Home</a></li>
+<li><a href="rationale.html" class="">Why AoL</a></li>
+<li><a href="memo.html" class="">Dean's Memo</a></li>
+<li><a href="data.html" class="">Data and Reporting</a></li>
+<li><a href="plan.html" class="active">College Plan</a></li>
+<li><a href="guide.html" class="">Canvas Guide</a></li>
+<li><a href="exemplars.html" class="">Exemplars</a></li></ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">College Plan 2026</div>
+    <h1>The 2026 Staged Implementation Plan</h1>
+    <p class="lead">The phased approach to AoL implementation across the College in 2026, including scope, timeline, and the opt-in pathway for staff ready to engage now.</p>
+  </div>
+</div>
+<div class="content-wrap prose">
+
+<style>
+.phase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 32px 0 40px; }
+.phase-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 24px 22px;
+  border-top: 4px solid var(--purple);
+}
+.phase-card.accent { border-top-color: var(--bright-blue); }
+.phase-card h3 { font-size: 16px; font-weight: 600; color: var(--dark-blue); margin-bottom: 10px; }
+.phase-card p { font-size: 14px; line-height: 1.7; color: var(--text-mid); }
+.phase-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--purple-light); color: var(--purple); border-radius: 20px; padding: 3px 10px; margin-bottom: 10px; }
+.phase-tag.blue { background: var(--blue-light); color: var(--bright-blue); }
+.timeline { position: relative; margin: 36px 0; }
+.timeline::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.timeline-item { display: flex; gap: 20px; margin-bottom: 28px; position: relative; }
+.timeline-dot { width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background: var(--dark-blue); border: 3px solid var(--purple); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 12px; z-index: 1; }
+.timeline-content { padding-top: 6px; }
+.timeline-content h3 { font-size: 16px; font-weight: 600; color: var(--dark-blue); margin-bottom: 6px; }
+.timeline-content p { font-size: 15px; line-height: 1.7; color: var(--text-mid); }
+.opt-in-box { background: var(--limestone); border: 1px solid var(--limestone-dark); border-radius: 8px; padding: 26px 28px; margin: 32px 0; border-left: 5px solid var(--purple); }
+.opt-in-box h3 { font-size: 17px; font-weight: 600; color: var(--dark-blue); margin-bottom: 10px; }
+.opt-in-box p { font-size: 15px; line-height: 1.75; color: var(--text); }
+</style>
+
+<p>The overarching goal is clear: AoL should encompass all courses across the College as part of our commitment to education quality. For 2026, a staged approach has been designed that builds toward this goal progressively, starting with a targeted set of courses and expanding from 2027 with a clear roster mechanism to ensure nothing falls through the gaps.</p>
+
+<h2>The 2026 Staged Approach</h2>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-dot">S1</div>
+    <div class="timeline-content">
+      <h3>Semester 1 2026 Final Assignment Focus</h3>
+      <p>For courses in scope in Semester 1, the focus is on the final assignment only. Course coordinators are not being asked to change their assignments. TLI will work one-on-one with each course coordinator to confirm which CLOs the final assignment captures and to ensure these are correctly reflected in the Canvas rubric. For most courses this will take no more than 15 minutes.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">S2</div>
+    <div class="timeline-content">
+      <h3>Semester 2 2026 Extended to Two Assignments</h3>
+      <p>From Semester 2, AoL data will be collected from two major assignment tasks per course. This gives richer and more reliable data on how CLOs are being achieved across a program of study, while remaining manageable. The focus is on substantive, summative tasks that provide a meaningful picture of student learning outcomes.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">27</div>
+    <div class="timeline-content">
+      <h3>From 2027 Expanded Roster and Full Coverage</h3>
+      <p>A roster will be developed during 2026 for transitioning additional courses into the AoL framework from 2027. This provides a clear, monitored mechanism to build toward comprehensive coverage across the College over time, ensuring progress is tracked and no program is left behind.</p>
+    </div>
+  </div>
+</div>
+
+<h2>Which Courses Are in Scope for 2026</h2>
+<p>The 2026 scope focuses on first-year courses within the eight programs designated for AACSB reporting, with a minimum of three courses per program selected to ensure adequate coverage of Program Learning Outcomes. Priority is given to courses offered in both semesters, so that there is an opportunity to close the loop within the year itself, demonstrating improvement within a single reporting cycle.</p>
+
+<div class="phase-grid">
+  <div class="phase-card">
+    <div class="phase-tag">Primary Scope</div>
+    <h3>AACSB Reporting Programs</h3>
+    <p>Eight programs designated for AACSB reporting, one undergraduate and one postgraduate per school. First-year courses within these programs are the priority, with a minimum of three courses per program selected.</p>
+  </div>
+  <div class="phase-card accent">
+    <div class="phase-tag blue">Secondary Scope</div>
+    <h3>All Other Programs</h3>
+    <p>Data will be collected across all programs, with formal AACSB reporting focused on the designated programs. This builds the broader evidence base the College needs for long-term quality assurance.</p>
+  </div>
+</div>
+
+<div class="opt-in-box">
+  <h3>Opt-In Opportunity</h3>
+  <p>Alongside the staged rollout, there is an open opt-in opportunity for any course coordinator who already sees the value in this work and has the capacity to engage now. If you are ready to participate in AoL data collection regardless of whether your course is in the primary 2026 scope, we would welcome your involvement. Contact TLI to discuss how to get started.</p>
+</div>
+
+<div class="callout note">
+  <div class="callout-label">Note</div>
+  <div class="callout-body">Courses already participating in AoL will be generating the evidence required for Annual Program Monitoring and University Program Reviews as a natural byproduct of their marking practice, rather than needing to produce it through a separate process when those reviews fall due.</div>
+</div>
+
+</div>
+<footer class="site-footer">
+  Adelaide University | College of Business and Law | Assurance of Learning Staff Hub | Teaching and Learning Innovation
+</footer>
+</body>
+</html>

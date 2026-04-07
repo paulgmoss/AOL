@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AoL Staff Hub | AoL Hub | College of Business and Law</title>
+<style>/* Adelaide University Palette */
+:root {
+  --dark-blue: #140F50;
+  --purple: #836BFF;
+  --bright-blue: #1448FF;
+  --limestone: #F8EFE0;
+  --white: #FFFFFF;
+  --purple-light: #EEE9FF;
+  --blue-light: #E8EDFF;
+  --text: #1a1033;
+  --text-mid: #3d3560;
+  --text-light: #7a6fa8;
+  --border: #d8d0f0;
+  --limestone-dark: #ede4ce;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--limestone);
+  min-height: 100vh;
+}
+
+/* NAV */
+.site-nav {
+  background: var(--dark-blue);
+  border-bottom: 3px solid var(--purple);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--purple); }
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); background: rgba(131,107,255,0.25); }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--dark-blue);
+  padding: 60px 40px 50px;
+  border-bottom: 4px solid var(--purple);
+}
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+.page-hero .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero .lead {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* CONTENT WRAPPER */
+.content-wrap { max-width: 860px; margin: 0 auto; padding: 50px 40px 80px; }
+
+/* PROSE */
+.prose p { line-height: 1.8; margin-bottom: 18px; color: var(--text); text-align: justify; }
+.prose p:last-child { margin-bottom: 0; }
+.prose h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--dark-blue);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--purple);
+}
+.prose h3 { font-size: 17px; font-weight: 600; color: var(--dark-blue); margin: 28px 0 10px; }
+.prose ul { margin: 10px 0 18px 22px; }
+.prose ul li { margin-bottom: 8px; line-height: 1.7; }
+.prose strong { color: var(--dark-blue); }
+
+/* CALLOUT BOXES */
+.callout {
+  display: flex;
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.callout-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+}
+.callout-body { padding: 16px 20px; flex: 1; font-size: 15px; line-height: 1.75; }
+.callout.tip .callout-label { background: var(--purple); color: var(--white); }
+.callout.tip .callout-body { background: var(--purple-light); color: var(--text); font-style: italic; }
+.callout.note .callout-label { background: var(--bright-blue); color: var(--white); }
+.callout.note .callout-body { background: var(--blue-light); color: var(--dark-blue); }
+.callout.key .callout-label { background: var(--dark-blue); color: var(--purple); }
+.callout.key .callout-body { background: var(--limestone); color: var(--text); border-left: 3px solid var(--dark-blue); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark-blue);
+  border-top: 3px solid var(--purple);
+  padding: 28px 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.site-footer a { color: var(--purple); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html">AoL Hub <span>|</span> College of Business and Law</a>
+  <ul class="nav-links"><li><a href="index.html" class="active">Home</a></li>
+<li><a href="rationale.html" class="">Why AoL</a></li>
+<li><a href="memo.html" class="">Dean's Memo</a></li>
+<li><a href="data.html" class="">Data and Reporting</a></li>
+<li><a href="plan.html" class="">College Plan</a></li>
+<li><a href="guide.html" class="">Canvas Guide</a></li>
+<li><a href="exemplars.html" class="">Exemplars</a></li></ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">AoL Staff Hub</div>
+    <h1>Assurance of Learning at the College of Business and Law</h1>
+    <p class="lead">A central resource for course coordinators engaging with the 2026 AoL process, bringing together the pedagogical rationale, institutional context, reporting framework, and practical Canvas guidance.</p>
+  </div>
+</div>
+<div class="content-wrap prose">
+
+<style>
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin: 36px 0 56px; }
+.card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 10px; padding: 26px 24px; text-decoration: none; color: var(--text);
+  display: flex; flex-direction: column; transition: all 0.22s;
+  border-top: 4px solid var(--purple); box-shadow: 0 2px 8px rgba(20,15,80,0.06);
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(20,15,80,0.12); border-top-color: var(--bright-blue); }
+.card-icon { font-size: 26px; margin-bottom: 12px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--dark-blue); margin-bottom: 8px; }
+.card p { font-size: 14px; line-height: 1.65; color: var(--text-mid); flex: 1; }
+.card .card-link { font-size: 13px; font-weight: 600; color: var(--purple); margin-top: 16px; }
+
+.value-strip {
+  background: var(--dark-blue); border-radius: 10px;
+  padding: 34px 38px; margin: 44px 0;
+  border-left: 6px solid var(--purple);
+}
+.value-strip h2 {
+  font-family: 'DM Serif Display', serif; font-size: 21px;
+  color: var(--white); margin-bottom: 18px; border: none; padding: 0;
+}
+.value-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 13px;
+}
+.value-list li {
+  display: flex; gap: 11px; align-items: flex-start;
+  color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.6;
+}
+.value-list li::before {
+  content: ''; width: 7px; height: 7px; min-width: 7px;
+  border-radius: 50%; background: var(--purple); margin-top: 8px;
+}
+
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px; }
+.intro-text { font-size: 17px; line-height: 1.85; color: var(--text); margin-bottom: 18px; }
+</style>
+
+<p class="intro-text">At its core AoL is about education quality. It provides a structured evidence-based process for understanding whether our students are achieving the learning outcomes we have set for them and for using that evidence to make meaningful improvements to our courses and programs. Done well it gives course coordinators genuine insight into where students are succeeding and where they are struggling and it creates a feedback loop that drives better design and delivery over time.</p>
+
+<p>The approach described here is grounded in constructive alignment: the principle that learning outcomes, teaching sequences, and assignment tasks should form a coherent, mutually reinforcing system. When this alignment is working well, AoL data collection is not an additional burden. It is a natural byproduct of good assignment design. The resources here are designed to help you get there.</p>
+
+<div class="value-strip">
+  <h2>Why AoL matters, for your teaching and your students</h2>
+  <ul class="value-list">
+    <li>Makes explicit whether what you intend to teach is actually being assessed and achieved</li>
+    <li>Generates evidence for Annual Program Monitoring and University Program Reviews as a natural byproduct of good marking practice, not a separate process</li>
+    <li>Gives students outcome-level feedback, enabling self-regulation and targeted preparation</li>
+    <li>Satisfies AACSB accreditation requirements through evidence of a genuine quality culture</li>
+    <li>Identifies specific learning gaps rather than just pass rates, so interventions can be precise</li>
+    <li>Strengthens course design by prompting deeper attention to outcome quality and sequencing</li>
+    <li>Builds a continuous improvement loop that benefits students in every future cohort</li>
+    <li>Creates the space and structure to reflect on whether your course is working as intended</li>
+  </ul>
+</div>
+
+<div class="section-label">Resources</div>
+<div class="card-grid">
+  <a class="card" href="rationale.html">
+    <div class="card-icon">📐</div>
+    <h3>Pedagogical Rationale</h3>
+    <p>The theoretical and practical case for our AoL approach: constructive alignment, outcome-level precision, and the evidence base for what we are doing.</p>
+    <div class="card-link">Read the rationale</div>
+  </a>
+  <a class="card" href="memo.html">
+    <div class="card-icon">📋</div>
+    <h3>Dean's Memorandum</h3>
+    <p>The official communication from Peter Burdon outlining the 2026 AoL approach and what is expected of course coordinators this year.</p>
+    <div class="card-link">Read the memo</div>
+  </a>
+  <a class="card" href="data.html">
+    <div class="card-icon">📊</div>
+    <h3>Data and Reporting</h3>
+    <p>How AoL data flows from your rubric to programme-level reporting, including a live view of the current reporting cycle and how findings are communicated back to staff.</p>
+    <div class="card-link">Understand the process</div>
+  </a>
+  <a class="card" href="plan.html">
+    <div class="card-icon">🗓️</div>
+    <h3>College Plan 2026</h3>
+    <p>The staged implementation plan for 2026, including which courses are in scope, how the roster will expand from 2027, and how to opt in.</p>
+    <div class="card-link">View the plan</div>
+  </a>
+  <a class="card" href="guide.html">
+    <div class="card-icon">🎯</div>
+    <h3>Canvas How-To Guide</h3>
+    <p>A step-by-step walkthrough for setting up Course Learning Outcomes in Canvas and configuring them correctly for AoL data collection.</p>
+    <div class="card-link">View the guide</div>
+  </a>
+  <a class="card" href="exemplars.html">
+    <div class="card-icon">⭐</div>
+    <h3>Exemplars</h3>
+    <p>Real examples of AoL working well in practice, showing how outcome-level data has shaped teaching decisions and improved student results.</p>
+    <div class="card-link">See examples</div>
+  </a>
+</div>
+
+<div class="callout note">
+  <div class="callout-label">Note</div>
+  <div class="callout-body">If you need direct support with your rubric or Canvas setup, contact Teaching and Learning Innovation (TLI). A member of the TLI team will work with you one-on-one to review your final assignment rubric, confirm which CLOs it captures, and make any adjustments needed. For most courses, this will take no more than 15 minutes.</div>
+</div>
+
+</div>
+<footer class="site-footer">
+  Adelaide University | College of Business and Law | Assurance of Learning Staff Hub | Teaching and Learning Innovation
+</footer>
+</body>
+</html>
