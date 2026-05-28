@@ -78,9 +78,9 @@ body {
 
 /* PAGE HERO */
 .page-hero {
-  background: #EEEDFE;
-  padding: 60px 40px 50px;
-  border-bottom: 3px solid var(--purple);
+  background: #ffffff;
+  padding: 52px 40px 44px;
+  border-bottom: 4px solid var(--purple);
 }
 .page-hero-inner { max-width: 860px; margin: 0 auto; }
 .page-hero .eyebrow {
@@ -88,7 +88,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #534AB7;
+  color: var(--purple);
   margin-bottom: 14px;
 }
 .page-hero h1 {
@@ -96,11 +96,11 @@ body {
   font-size: clamp(28px, 4vw, 44px);
   color: var(--dark-blue);
   line-height: 1.15;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .page-hero .lead {
   font-size: 17px;
-  color: #3C3489;
+  color: var(--text-mid);
   line-height: 1.75;
   max-width: 680px;
 }
@@ -162,6 +162,27 @@ body {
   font-size: 13px;
 }
 .site-footer a { color: var(--purple); text-decoration: none; }
+
+.hero-icon-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+}
+.hero-icon-pill {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--limestone); border: 1px solid var(--border);
+  border-radius: 40px; padding: 7px 14px 7px 10px;
+  text-decoration: none; color: var(--dark-blue);
+  font-size: 13px; font-weight: 500;
+  transition: all 0.18s;
+}
+.hero-icon-pill:hover {
+  background: var(--purple-light); border-color: var(--purple);
+  color: var(--purple);
+}
+.hero-icon-pill svg {
+  width: 16px; height: 16px; flex-shrink: 0;
+  stroke: var(--purple); fill: none; stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
+}
 </style>
 </head>
 <body>
@@ -180,6 +201,11 @@ body {
     <div class="eyebrow">Governance</div>
     <h1>AoL Sub-Committee: Terms of Reference</h1>
     <p class="lead">The Terms of Reference for the Assurance of Learning Sub-Committee of the College Education Quality Committee, established March 2026.</p>
+  <div class="hero-icon-row">
+    <span class="hero-icon-pill"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>&nbsp;Established March 2026</span>
+    <span class="hero-icon-pill"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>&nbsp;Meets 4 times per year</span>
+    <a class="hero-icon-pill" href="data.html"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>&nbsp;Data and Reporting</a>
+  </div>
   </div>
 </div>
 <div class="content-wrap prose">
